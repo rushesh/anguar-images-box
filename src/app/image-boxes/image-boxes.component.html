@@ -1,0 +1,13 @@
+<div class="container m-3">
+    <h1 class="text-center">Images</h1>
+  <div class="row">
+    <ng-container *ngFor="let i = index; let image; of imageNames">
+      <div class="col-sm-2 box">
+        <div class="image"  (click)="isClicked(i,image)">
+          <img *ngIf="image.show" [src]="image.url" />
+        </div>
+        <button class="btn btn-danger" (click)="deleteImg(i,image)">Delete</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
